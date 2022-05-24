@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8041915132260315953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9169772513795789808}
+  - component: {fileID: 3470057073549823178}
+  m_Layer: 0
+  m_Name: ArmyMTempInf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9169772513795789808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8041915132260315953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 926.9346, y: 675.94507, z: -1029.108}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3470057073549823178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8041915132260315953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b44efb98617f34baec407079ad083a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Army M Temp Inf
+  cost: 10
+  health: 1
+  str: 0
+  ranAcc: 70
+  melAcc: 40
+  melDef: 20
+  armor: 4
+  weapons: []
+  addButton: {fileID: 6335885222974322421, guid: 5215e7c6431c0fd4da4d56c932f909ef,
+    type: 3}
+  selectButton: {fileID: 3704494954797231612, guid: bf8317a63b958ac4788f41328f0ee341,
+    type: 3}

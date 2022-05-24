@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &581382198123429874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6053451863667592768}
+  - component: {fileID: 7024170034483091250}
+  - component: {fileID: 6053069702444669006}
+  m_Layer: 0
+  m_Name: ArmyTestInf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6053451863667592768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581382198123429874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 555.47, y: 1025.3198, z: -1992.1859}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7024170034483091250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581382198123429874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434f35bf86fd61640b68437e38a46786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possModels:
+  - {fileID: 7035067214783291153, guid: a4b5c1428479c384c84595f895d71f10, type: 3}
+  - {fileID: 8873395052214522561, guid: 4c216fa49400dd240b8e1509090e5839, type: 3}
+  origModels: []
+  origSpeedClass: 3
+  selButton: {fileID: 8754241532981121092, guid: 9ac39399245c4ff47a61a1a89dae8e3a,
+    type: 3}
+  scroll: {fileID: 2414600124166578076, guid: 8a6d3cc840115c44d8a688039562d3d2, type: 3}
+  chargeScrollPref: {fileID: 2787573668935749773, guid: afbca3f8055e0994aa98d839c4a45ae7,
+    type: 3}
+  origName: ArmyTestInf
+--- !u!114 &6053069702444669006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581382198123429874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
