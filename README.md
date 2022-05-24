@@ -30,5 +30,5 @@ This project will seek to do the following:
   - speedphase 7: superheavy vehicles
 9. Before getting into a game with other players, players will be able to build their armies by picking one of four factions, each with their own list of unique units with their own strengths and weaknesses
 10. The four factions will be inspired by the four horsement of the apocalypse from the Book of Revelations (Conquest/Pestilance, Famine, War, and Death)
-11. In addition, players will be able to build decks for use in the game, one for objectives to be drawn in the command phase, and one for powerfull special abilities that will be unique to each faction, and will have special conditions for use (look at the stratagems in the codexes of army books for 40k 8th edition for examples and inspiration)
+11. In addition, players will be able to build decks for use in the game, one for objectives to be drawn in the command phase, and one for powerful special abilities that will be unique to each faction, and will have special conditions for use (look at the stratagems in the codexes of army books for 40k 8th edition for examples and inspiration)
 
