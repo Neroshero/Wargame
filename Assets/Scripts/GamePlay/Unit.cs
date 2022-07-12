@@ -638,7 +638,11 @@ public class Unit : MonoBehaviourPun
     {
         foreach (Model model in models)
         {
-            if (model.GetInMeleeWith()) inMelee = true;
+            if (model.GetInMeleeWith())
+            {
+                inMelee = true;
+                break;
+            }
         }
         inMelee = false;
     }

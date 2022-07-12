@@ -247,7 +247,19 @@ public class Model : MonoBehaviourPun
         {
             if(!visible.Contains(toCheck.gameObject))
             visible.Add(toCheck.gameObject);
-            if(photonView.IsMine) foreach (Weapon weapon in weapons) weapon.AddTarget(toCheck.gameObject);
+            if (photonView.IsMine)
+            {
+                //foreach (Weapon weapon in weapons) weapon.AddTarget(toCheck.gameObject);
+                foreach (Weapon weapon in weapons)
+            {
+                if (!weapon.IsMelee()) weapon.AddTargets(visible);
+                else
+                {
+                    Debug.Log(inMeleeWith);
+                    weapon.AddTargets(inMeleeWith);
+                }
+            }
+            }
             /*
             if (photonView.Controller.IsLocal)
             {
@@ -315,6 +327,8 @@ public class Model : MonoBehaviourPun
         relbutton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
     }
 
+    /*
+     * Because InMelee now tracks units instead of models, this may no longer be necessary here;
     public void ClearInMelee()
     {
         //remove all opposing units in this models inMeleeWith, and remove this model from those unit's models inMeleeWith
@@ -329,6 +343,7 @@ public class Model : MonoBehaviourPun
         inMelee = false;
         unit.CheckMelee();
     }
+    */
 
     [PunRPC]
     public void AddInMelee(int toAdd)
@@ -929,10 +944,10 @@ public class Model : MonoBehaviourPun
 
     public void Die()
     {
-        ClearInMelee();
-        unit.CheckMelee();
+        //ClearInMelee();
         unit.RemoveModel(this);
-        if (photonView.IsMine)
+        unit.CheckMelee();
+        if (photonView.IsMine) //this happens off an RPC, so only do this part for the player that controls this model;
         {
             Destroy(relbutton);
             PhotonNetwork.Destroy(photonView);

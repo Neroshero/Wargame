@@ -180,7 +180,7 @@ public class GameController : MonoBehaviourPunCallbacks
             speedPhase = 1;
             gamePhase++;
             playerTurn = initalPlayer;
-            if (gamePhase == 2) gamePhase+=2; //Remember to remove when 'special' phase is implemented
+            if (gamePhase == 2) gamePhase+=1; //Remember to remove when 'special' phase is implemented
             CheckSpeedPhase();
             Debug.Log(playerTurn);
             /*
@@ -422,7 +422,7 @@ public class GameController : MonoBehaviourPunCallbacks
         Army toCheck = ownership[playerTurn].GetComponent<Army>();
         List<Unit> toUnit = toCheck.GetUnits();
         List<Unit> toConfirm = new List<Unit>();
-        if(gamePhase == 7)//as this marks the end of the damage phase, check if either army has been wiped ou
+        if(gamePhase == 7)//as this marks the end of the damage phase, check if either army has been wiped out
         {
             int first = ownership[1].GetComponent<Army>().CheckGameOver();
             int second = ownership[2].GetComponent<Army>().CheckGameOver();
@@ -453,7 +453,7 @@ public class GameController : MonoBehaviourPunCallbacks
         if (toConfirm.Count == 0)
         {
             Debug.Log("None can activate this phase");
-            if (!speedPhaseChecked) //ifs none of the active player's units can activate in this speedphase, move to the other player
+            if (!speedPhaseChecked) //if none of the active player's units can activate in this speedphase, move to the other player
             {
                 speedPhaseChecked = true;
                 if (playerTurn == 1) playerTurn = 2;
