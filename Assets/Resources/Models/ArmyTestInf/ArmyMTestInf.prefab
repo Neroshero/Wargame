@@ -1539,6 +1539,7 @@ MonoBehaviour:
   melDef: 20
   armor: 4
   move: 20
+  traits: []
   toInstantiate:
   - {fileID: 6889782386780923508, guid: 133f68f96c94d854aa5dce7c9014a559, type: 3}
   - {fileID: 4346046200525335451, guid: 3b9648a634f9fa94f910f6599a4667d2, type: 3}

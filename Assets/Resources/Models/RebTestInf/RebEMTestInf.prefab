@@ -522,6 +522,8 @@ MonoBehaviour:
   melDef: 20
   armor: 4
   move: 20
+  traits:
+  - obSec
   toInstantiate:
   - {fileID: 4346046200525335451, guid: 5fc4b10f6c51305449c6f3b86453f8fe, type: 3}
   - {fileID: 4346046200525335451, guid: e329d59a8f05cb042ad8b921314b1eb4, type: 3}

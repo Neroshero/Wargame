@@ -75,6 +75,10 @@ public class Model : MonoBehaviourPun
     private int armor;
     [SerializeField]
     private int move;
+
+    [SerializeField]
+    private List<string> traits; //used to keep track of special game rules related to each model;
+
     private int charge;
     private int health;
     private bool wounded;
@@ -958,6 +962,11 @@ public class Model : MonoBehaviourPun
     {
         chargeTarget = toCharge;
         charge = distance;
+    }
+
+    public bool HasTrait(string toCheck)
+    {
+        return traits.Contains(toCheck);
     }
 
     /*

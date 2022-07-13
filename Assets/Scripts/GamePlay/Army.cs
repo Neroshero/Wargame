@@ -302,7 +302,7 @@ public class Army : MonoBehaviourPun
     */
     public bool ConfirmOrders()
     {
-        //most important script in the army class, delegats any orders issued by the player to the assigned unit, and returns if they were able to be carried out.
+        //most important script in the army class, delegates any orders issued by the player to the assigned unit, and returns if they were able to be carried out.
 
         int phase = GC.GetGamePhase();
         Debug.Log("Confirming Orders for GamePhase " + phase);
@@ -343,6 +343,10 @@ public class Army : MonoBehaviourPun
         {
             return NoMove();
         }
+        else if (phase == 3)
+        {
+            return NoShoot();
+        }
         else if (phase == 4)
         {
             return NoCharge();
@@ -365,6 +369,21 @@ public class Army : MonoBehaviourPun
             if(unit.GetSpeedClass() == sp)
             {
                 unit.photonView.RPC("SetHasMoved", RpcTarget.All, true);
+            }
+        }
+        return true;
+    }
+
+    private bool NoShoot()
+    {
+        //Same as NoMove(), only for the shooting phase
+        int sp = GC.GetSpeedPhase();
+        Debug.Log("NoShoot speedPhase: " + sp);
+        foreach (Unit unit in units)
+        {
+            if (unit.GetSpeedClass() == sp)
+            {
+                unit.photonView.RPC("SetHasShot", RpcTarget.All, true);
             }
         }
         return true;
@@ -572,6 +591,12 @@ public class Army : MonoBehaviourPun
                 active = null;
             }
         }
+    }
+
+    public void AddPoints(int toAdd)
+    {
+        points += toAdd;
+        GC.UpdateScore(playerID, points);
     }
 
     public void SetIncoming(Weapon toSet, GameObject btn)

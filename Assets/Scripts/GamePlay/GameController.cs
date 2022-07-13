@@ -29,7 +29,14 @@ public class GameController : MonoBehaviourPunCallbacks
     [SerializeField]
     private List<GameObject> deploymentB;
     private List<List<GameObject>> deploymentZones;
+    [SerializeField]
+    private List<GameObject> objSetA;
+    [SerializeField]
+    private List<GameObject> objSetB;
+    private List<List<GameObject>> objectiveSets;
     private bool hasSetup;
+
+    private List<GameObject> activeObjectives;
 
     [SerializeField]
     private GameObject speedPhaseText;
@@ -39,6 +46,10 @@ public class GameController : MonoBehaviourPunCallbacks
     [SerializeField]
     private GameObject gamePhaseText;
     private List<string> gamePhases;
+    [SerializeField]
+    private GameObject localPointsText;
+    [SerializeField]
+    private GameObject opponentPointsText;
 
     [SerializeField]
     private GameObject losePanel;
@@ -74,7 +85,12 @@ public class GameController : MonoBehaviourPunCallbacks
             deploymentA,
             deploymentB
         };
+        objectiveSets = new List<List<GameObject>>{
+            objSetA,
+            objSetB
+        };
         doDamage = false;
+        activeObjectives = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -164,6 +180,10 @@ public class GameController : MonoBehaviourPunCallbacks
             Debug.Log(playerTurn);
             CheckSpeedPhase();
             gamePhaseText.GetComponent<Text>().text = "It is currently the " + gamePhases[gamePhase - 1] + " phase";
+            foreach(GameObject objective in activeObjectives)
+            {
+                objective.GetComponent<Objective>().UpdatePoints();
+            }
             return;
             /*
             int localPlayer = PhotonNetwork.LocalPlayer.ActorNumber;
@@ -411,6 +431,23 @@ public class GameController : MonoBehaviourPunCallbacks
         Debug.Log("Ownership: " + ownership);
         Debug.Log("Player 1's Army: " + ownership[1]);
         Debug.Log("Player 2's Army: " + ownership[2]);
+        SetupObjectives(depZone, player1.GetArmy(), player2.GetArmy());
+    }
+
+    private void SetupObjectives(int objSet, Army player1Army, Army player2Army)
+    {
+        foreach (GameObject objective in objectiveSets[objSet])
+        {
+            Objective temp = Instantiate(objective).GetComponent<Objective>();
+            temp.SetupArmies(player1Army, player2Army);
+            activeObjectives.Add(temp.gameObject);
+        }
+    }
+
+    public void UpdateScore(int player, int toChange)
+    {
+        if (PhotonNetwork.CurrentRoom.GetPlayer(player).IsLocal) localPointsText.GetComponent<Text>().text = "Your Points: " + toChange;
+        else opponentPointsText.GetComponent<Text>().text = "Opponent's Points: " + toChange;
     }
 
     [PunRPC]

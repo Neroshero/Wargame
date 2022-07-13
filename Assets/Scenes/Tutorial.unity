@@ -1672,6 +1672,8 @@ RectTransform:
   - {fileID: 1112165825}
   - {fileID: 1720735459}
   - {fileID: 1723028507}
+  - {fileID: 1893461498}
+  - {fileID: 1679552466}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3083,6 +3085,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1679552465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1679552466}
+  - component: {fileID: 1679552468}
+  - component: {fileID: 1679552467}
+  m_Layer: 5
+  m_Name: Opponent Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1679552466
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679552465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1126837287}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 842.83, y: 491.88007}
+  m_SizeDelta: {x: 234.24, y: 31.41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1679552467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679552465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Opponent''s Points: 0'
+--- !u!222 &1679552468
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679552465}
+  m_CullTransparentMesh: 0
 --- !u!1 &1712928901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,7 +3401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: 0.000022888}
+  m_AnchoredPosition: {x: 1, y: 0.000015258789}
   m_SizeDelta: {x: -1687.2, y: -833.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1744118721
@@ -3504,9 +3583,23 @@ MonoBehaviour:
   deploymentB:
   - {fileID: 7555569797540806311, guid: 66c69736cbf30c3438b061e6fb092a9c, type: 3}
   - {fileID: 5175774751670715976, guid: d8e6f016249e8154b86186067a535416, type: 3}
+  objSetA:
+  - {fileID: 7066315300101371070, guid: 353fa064b52ce4c4f987514ee02f287f, type: 3}
+  - {fileID: 851184660735845310, guid: 1e0ac39e51af36840be5f13e39a739c4, type: 3}
+  - {fileID: 2017449240118489664, guid: 99877e353f2ad0f4886a9cccf591367a, type: 3}
+  - {fileID: 7838010607615036436, guid: db857a14be6420a47bd68434b14eed8b, type: 3}
+  - {fileID: 1087576875533957085, guid: 287609d4df6a1f14ebaac501abd66fcd, type: 3}
+  objSetB:
+  - {fileID: 2645329837148050507, guid: d3f4fcfe3f2d8504a885eb36645b4b26, type: 3}
+  - {fileID: 6601275686174540425, guid: b1782f601f513434294db99336d5bf74, type: 3}
+  - {fileID: 5938769610243658591, guid: 729bcac1b8079074a9b1705412fdf87c, type: 3}
+  - {fileID: 8280491699130358062, guid: f2ae587ff93c9634bbfb851c2b466512, type: 3}
+  - {fileID: 1930514647700145041, guid: afaf24e2ba7974e40ba146e033d5a155, type: 3}
   speedPhaseText: {fileID: 1626421583}
   playerTurnText: {fileID: 1767433007}
   gamePhaseText: {fileID: 1888782536}
+  localPointsText: {fileID: 1893461497}
+  opponentPointsText: {fileID: 1679552465}
   losePanel: {fileID: 1720735458}
   winPanel: {fileID: 1112165824}
   menu: {fileID: 1723028504}
@@ -3759,6 +3852,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -67.5}
   m_SizeDelta: {x: 777.6, y: 66.5}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &1893461497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893461498}
+  - component: {fileID: 1893461500}
+  - component: {fileID: 1893461499}
+  m_Layer: 5
+  m_Name: Local Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1893461498
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893461497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1126837287}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 879.95, y: 523.29}
+  m_SizeDelta: {x: 160, y: 31.41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1893461499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893461497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Your Points: 0'
+--- !u!222 &1893461500
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893461497}
+  m_CullTransparentMesh: 0
 --- !u!1 &1957670856
 GameObject:
   m_ObjectHideFlags: 0
